@@ -93,14 +93,15 @@ button:hover{
 #projectGrid{
   display: grid; 
   margin: 50px 10%;
-  min-height: 400px;
-  height: 210vh;
-  grid-template-rows: 1fr 1fr 1fr; 
+  min-height: 500px;
+  height: 260vh;
+  grid-template-rows: 1fr 1fr 1fr 1fr; 
   grid-template-columns: 50% 50%;
   grid-template-areas:
   "savethewhales projectstw"
   "projectdoe doe"
-  "gardenfresh projectgardenfresh";
+  "gardenfresh projectgardenfresh"
+  "projecttripper tripper";
 } 
 
 
@@ -113,9 +114,9 @@ button:hover{
 }
 
 #projectstw{
-  background-color: rgb(162, 213, 242,0.3);
+  background-color: rgb(162, 213, 242,0.5);
   grid-area: projectstw;
-  padding: 40px; 
+  padding: 80px; 
   /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)*/;
 }
 
@@ -130,8 +131,8 @@ button:hover{
 
 #projectdoe {
   grid-area: projectdoe; 
-  background-color: rgb(242, 199, 189,0.37);
-  padding: 40px; 
+  background-color: rgb(242, 199, 189,0.5);
+  padding: 80px; 
 }
 
 #doe{
@@ -143,13 +144,27 @@ button:hover{
 }
 #projectgardenfresh {
   grid-area: projectgardenfresh; 
-  background-color: rgb(162, 213, 242,0.5); 
-  padding: 40px; 
+  background-color: blanchedalmond; 
+  padding: 80px; 
 }
 
 #gardenfresh{
   grid-area: gardenfresh; 
   background-image: url("../images/photogardenfresh.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+#projecttripper {
+  grid-area: projecttripper; 
+  background-color: rgb(255, 126, 103,0.7); 
+  padding: 80px; 
+}
+
+#tripper{
+  grid-area: tripper; 
+  background-image: url("../images/phototripper.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -179,7 +194,7 @@ button:hover{
   display: flex;
   align-items: center;  
   justify-content: center; 
-  background-color: rgb(255, 126, 103,0.6);
+  background-color: rgb(255, 126, 103,0.5);
   height: 50px; 
   width: 100%; 
 }
@@ -197,5 +212,10 @@ button:hover{
 #projectGrid button:hover{
   color: white;
   background-color:#07689F; 
+}
+
+#projectGrid button{
+  position: relative;
+
 }
 
