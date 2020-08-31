@@ -1,16 +1,31 @@
 body{
     font-family: 'Poppins', sans-serif;
 }
+#heroContent h1{
+  font-size: 45px; 
+  font-weight: 700;
+}
 h1{
   font-size: 45px; 
+  font-weight: 500;
 }
 h2{
   font-size: 30px;
+  line-height: 1.3cm;
   font-family: 'Quicksand', sans-serif;
-  font-weight: 200; 
+  font-weight: 400; 
 }
 h3{
   font-size: 20px;
+}
+p{
+  font-family: 'Quicksand', sans-serif;
+  line-height: 0.9cm;
+  font-weight: 400;
+  font-size: 20px;
+}
+em{
+  font-style: bold;
 }
 #navbar {
     display: flex;
@@ -20,6 +35,7 @@ h3{
     font-family: 'Quicksand', sans-serif;
   }
   #navbar p {
+
     width: 60%;
     align-content: flex-start; 
     font-weight: 300;
@@ -36,31 +52,64 @@ h3{
     text-decoration: none;
     color: black; 
   }
-.heroImg{
-  display: grid; 
+.heroPage{ 
   margin: 50px 10%;
   min-height: 200px;
   height: 80vh;
-  grid-template-rows: 1fr; 
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-  "aboutme heroimage";
+
 }
-.heroImg h1{
-  font-weight: 900;
-  font-size: 60px;
+#heroContent{
+  background-image: url("../images/background_pink1.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px; 
+  padding-top: 100px;
 }
 
-#aboutme{
-  grid-area: aboutme; 
-  padding: 70px; 
+/*.aboutMe{
+  margin: 50px 10%;
+  min-height: 200px;
+  height: 60vh;
+  padding: 50px; 
   padding-top: 200px;
 }
 
-#aboutme h2{
+.aboutMe{
+  background-color: goldenrod;
+}
+
+.aboutMe h2{
+  
   font-family: 'Quicksand', sans-serif;
   font-weight: 200;
   font-size: 35px; 
+
+}
+*/
+.aboutMeGrid{
+  display: grid; 
+  margin: 50px 10%;
+  margin-bottom: 100px;
+  min-height: 400px;
+  height: 65vh;
+  grid-template-rows: 1fr; 
+  grid-template-columns: 60% 40%;
+  grid-template-areas:
+  "mainContent mainImg";
+} 
+
+
+#mainImg{
+  background-image: url("../images/sign.jpg"); 
+  background-position: center ;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#mainContent{
+  background-color: rgb(255, 199, 150,0.6);
+  padding: 50px; 
+  padding-right: 60px;
 }
 
 
@@ -73,7 +122,8 @@ button {
   border: 2px solid salmon;
   font-size: 20px;
   padding: 17px;
-  width: 30%;
+  width: 17%;
+  align-content: center;
   transition: all 0.2s ease-in;
 }
 
@@ -81,93 +131,74 @@ button:hover{
   color: white;
   background-color: salmon; 
 }
-
-.heroimage{
-  grid-area: heroimage; 
-  margin: 70px; 
-  background-image: url("../images/MyPhoto.png");
-  background-repeat: no-repeat; 
-  background-size: contain; 
-  background-position: center;
+.flexContainer{
+  position: relative;
+  display: flex;
+  flex-direction: row;  
+  margin: 20px; 
+  height: 550px;
+ 
 }
-#projectGrid{
-  display: grid; 
+.flexContainer h3{
+  background-color: #8ABFC9;
+  font-size: 26px;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 25px;
+  margin: 0px;
+  
+}
+
+
+.list ul{
+  list-style: none;
+  display: block;
+  
+}
+
+.list li{
+
+  font-size: 22px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 200; 
+  padding: left 5px; 
+  padding-top: 10px; 
+  margin: 5px; 
+}
+
+.mySkill{
+ 
   margin: 50px 10%;
-  min-height: 500px;
-  height: 260vh;
-  grid-template-rows: 1fr 1fr 1fr 1fr; 
-  grid-template-columns: 50% 50%;
-  grid-template-areas:
-  "savethewhales projectstw"
-  "projectdoe doe"
-  "gardenfresh projectgardenfresh"
-  "projecttripper tripper";
+  min-height: 400px;
+  height: 65vh;
+  padding: 50px; 
+  margin-bottom: 100px;
+
 } 
 
 
-.projectGridArea{
-  background-position: center; 
-  margin: 20px ; 
-  display: grid; 
-  align-content: center; 
-  justify-content: center;
-}
-
-#projectstw{
-  background-color: rgb(162, 213, 242,0.5);
-  grid-area: projectstw;
-  padding: 80px; 
-  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)*/;
+#uxSkill{
+  background-color: #D8EEF2;
+  width: 33%;
+  margin: 20px; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
 }
 
 
 
-#savethewhales{
-  grid-area: savethewhales;
-  background-image: url("../images/photosavethewhales.png");
-  background-size: contain; 
-  background-repeat: no-repeat;
-} 
+#uiSkill{
+  background-color: #D8EEF2;;
+  width: 33%;
+  margin: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
 
-#projectdoe {
-  grid-area: projectdoe; 
-  background-color: rgb(242, 199, 189,0.5);
-  padding: 80px; 
 }
 
-#doe{
-  grid-area: doe; 
-  background-image: url("../images/photodoe.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-#projectgardenfresh {
-  grid-area: projectgardenfresh; 
-  background-color: blanchedalmond; 
-  padding: 80px; 
-}
-
-#gardenfresh{
-  grid-area: gardenfresh; 
-  background-image: url("../images/photogardenfresh.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-
-#projecttripper {
-  grid-area: projecttripper; 
-  background-color: rgb(255, 126, 103,0.7); 
-  padding: 80px; 
-}
-
-#tripper{
-  grid-area: tripper; 
-  background-image: url("../images/phototripper.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+#wedSkill{
+  background-color: #D8EEF2;;
+  width: 33%;
+  margin: 20px; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
 }
 
 #footer{
@@ -194,7 +225,7 @@ button:hover{
   display: flex;
   align-items: center;  
   justify-content: center; 
-  background-color: rgb(255, 126, 103,0.5);
+  background-color: rgb(255, 126, 103,0.6);
   height: 50px; 
   width: 100%; 
 }
@@ -214,8 +245,135 @@ button:hover{
   background-color:#07689F; 
 }
 
-#projectGrid button{
-  position: relative;
+
+@media only screen and (max-width: 600px){
+  #heroContent h1{
+    font-size: 30px; 
+    font-weight: 700;
+  }
+  h1{
+    font-size: 30px; 
+    font-weight: 500;
+  }
+  h2{
+    font-size: 20px;
+    line-height: 0.8cm;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400; 
+  }
+  h3{
+    font-size: 18px;
+  }
+  p{
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1cm;
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  .heroPage{ 
+    margin: 10px 0% auto;
+    min-height: 100px;
+    height: 55vh;
+    
+  }
+  .aboutMeGrid{
+    margin: 0% auto;
+    min-height: 200px;
+    margin-bottom: none; 
+    height: 80vh; 
+    grid-template-rows: 650px 300px; 
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "mainContent"
+    "mainContent"
+    ;
+  }
+  button {
+    position: relative;
+    float: right;
+    cursor: pointer;
+    color: salmon;
+    background-color: white; 
+    font-weight: 300;
+    border: 2px solid salmon;
+    font-size: 20px;
+    padding: 10px;
+    width: 30%;
+    align-content: center;
+    transition: all 0.2s ease-in;
+  }
+
+  #mainContent{
+    background-color: rgb(255, 199, 150,0.6);
+    padding: 40px; 
+    padding-right: 20px;
+    line-height: 0.5cm;
+  }
+  #mainContent p{
+    line-height: 0.7cm;
+  }
+  #heroContent{
+    padding: 20px; 
+  }
+  .mySkill{
+ 
+    margin: 0px auto;
+    min-height: 400px;
+    height: 110vh;
+    padding: 40px; 
+    margin-bottom: 30px;
+    border: none; 
+  
+  } 
+  .flexContainer{
+    flex-direction: column;  
+    height: 100vh; 
+  
+  }
+  .flexContainer h3{
+
+    font-size: 22px;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 15px;
+    margin: 0px;
+    
+  }
+  #uxSkill{
+    background-color: #D8EEF2;
+    width: 80%;
+    margin: 20px auto; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+  }
+  
+  
+  
+  #uiSkill{
+    background-color: #D8EEF2;;
+    width: 80%;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+  
+  }
+  
+  #wedSkill{
+    background-color: #D8EEF2;;
+    width: 80%;
+    margin: 20px auto; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+  }
+
+
+  
+  .list li{
+  
+    font-size: 18px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 200; 
+    padding: left 5px; 
+    padding-top: 10px; 
+    margin: 5px; 
+  }
 
 }
-
