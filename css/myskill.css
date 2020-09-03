@@ -1,6 +1,9 @@
 body{
     font-family: 'Poppins', sans-serif;
 }
+a:link{
+  text-decoration: none;
+}
 #heroContent h1{
   font-size: 45px; 
   font-weight: 700;
