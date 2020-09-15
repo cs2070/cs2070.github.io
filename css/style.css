@@ -252,7 +252,6 @@ button:hover{
 
 button.contentbutton{
   position: relative; 
-  left: 70%; 
   float: right; 
   color: #07689F; 
   font-weight: 300;
