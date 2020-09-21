@@ -169,6 +169,8 @@ button:hover{
   .mainbutton:hover:after {
       width: 110%;
     }
+
+  
 .flexContainer{
   position: relative;
   display: flex;

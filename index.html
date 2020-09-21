@@ -10,23 +10,42 @@
         r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
         a.appendChild(r);
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    
 </script>
     <title>Christine's Portfolio</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    <header id="navbar">
-        <p> CHRISTINE SHIN </p>
-        <div id="navigation">
-            <p><a href="myskill.html">ABOUT</a></p>
-            <p>WORK</p>
-            <p>RESUME</p>     
+    <header class="navbarContainer">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">CHRISTINE SHIN</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-link" href="#">WORK</a>
+                <a class="nav-link" href="myskill.html">ABOUT</a>
+                <a class="nav-link" href="#">RESUME</a>
+              </div>
+            </div>
+          </nav>
+
+        <!--<div id="navbar">
+            <p> CHRISTINE SHIN </p>
+            <div id="navigation">
+                 <p><a href="myskill.html">ABOUT</a></p>
+                <p>WORK</p>
+                <p>RESUME</p>     
+            </div>
         </div>
+        -->
     </header>
-    <section class="heroImg">
+    <section class="heroContainer">
+        <div class="heroImg">
             <div id="aboutme" class=heroImggrid>
                 <h1>Hi, I am Christine <br> UX/UI Designer </h1>
                 <h2>I am a UX/UI designer, researcher, marketer, educator, and life-long learner. </h2>
@@ -36,45 +55,48 @@
                 </button>
             </div>
             <div class="heroimage"></div>
+        </div>
     </section>
-    <section id="projectGrid">
+    <section class="containerContent">
+        <div id="projectGrid">
             <div id="projectstw" class="projectGridArea"> 
-                <h1> Redesigning the Non-profit Website  </h2>
-                <h2> Save the Whales is developing a better donate feature and more ways to educate and share ways to help the cause to help people who want to conserve marine life to learn more about how to make an impact in their homes or by donating.</h3>
+                <h1> Save the Whales  </h2>
+                <h2> Redesigning the nonprofit website</h3>
                 <br>
-                <button class="contentbutton">Learn More</button>
+                <button class="contentbutton"><a href="savethewhales.html">Learn More</a></button>
             </div>
             <div id="savethewhales" class="projectGridArea"></div>
-        </div>
+        
             <div id="projectdoe" class="projectGridArea"> 
-                <h1> Improving the Department of Education Website  </h2>
-                <h2> Department of Education is designing simple and Intuitive UI and navigation feature to help users to find needed information.  </h3>
+                <h1> Department of Education  </h2>
+                <h2> Redesigning the government website </h3>
                 <br>
                 <button class="contentbutton">Learn More</button>
             </div>
             <div id="doe" class="projectGridArea"></div>
             <div id="projectgardenfresh" class="projectGridArea"> 
-                <h1> Designing an app to reduce food waste  </h2>
-                <h2> Garden Fresh is a fridge/pantry management app to help anyone who wants to avoid unnecessary purchases and reduce food waste. We provide intuitive, easy-to-use inventory and reminder systems to get users to use up their expiring ingredients.  </h3>
+                <h1> Garden Fresh  </h2>
+                <h2> Designing the app to reduce food waste  </h3>
                 <br>
                 <button class="contentbutton">Learn More</button>
             </div>
             <div id="gardenfresh" class="projectGridArea"></div>
             <div id="projecttripper" class="projectGridArea"> 
-                <h1> Designing an tailored trip planner app </h2>
-                <h2>Tripper is helping travelers make quick travel decisions by creating tailored itineraries. Tripper provides the most efficient way to plan your dream trip by presenting the itinerary based on your interest and budget. </h2>
+                <h1> Tripper </h2>
+                <h2> Designing the app to make quick travel decision </h2>
                 </h3>
                 <br>
                 <button class="contentbutton">Learn More</button>
             </div>
             <div id="tripper" class="projectGridArea"></div>
+        </div>
     </section> 
     <footer id="footer">
         <div class="footer-block">
-            <h3>Get in touch with me </h3>
-            <a href="#" class="EM"> <img src="images/email.png"> </a>
-            <a href="#" class="LI"> <img src="images/linkedin.png"> </a>
-            <a href="#" class="EM"> <img src="images/behance.png"> </a>
+            <h3>Get in touch with me!</h3>
+            <a href="#" class="EM"> Email </a>
+            <a href="#" class="LI"> LinkedIn </a>
+            <a href="#" class="EM"> Behance</a>
         </div>
     </footer>
     <div class="copyright">
@@ -82,10 +104,13 @@
     </div>
     </footer>
     <!--Bootstrap Tag-->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!-- Add the script tag to jQuery below. -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="js/index.js"></script>   
+<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178009215-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
