@@ -6,15 +6,18 @@ h1{
 }
 h2{
   font-size: 30px;
-  font-weight: 300; 
+  font-weight: 400; 
 }
 h3{
   font-size: 20px;
 }
+h5{
+  font-size: 30px;
+  font-weight: 600px; 
+}
 p{
-  font-family: 'Quicksand', sans-serif;
   line-height: 0.9cm;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 20px;
   
 }
@@ -26,13 +29,18 @@ a:link{
   color: white; 
 }
 
+.LI a:link{
+  text-decoration: none;
+  color: blue; 
+}
+
 .navbarContainer{
   width: auto; 
   margin-left: auto; 
   margin-right: auto; 
 }
 .bg-light{
-  background-color:rgb(221, 242, 250) !important; 
+  background-color:white !important; 
 }
 .navbar-collapse {
   -ms-flex-preferred-size: 100%;
@@ -46,11 +54,11 @@ a:link{
   justify-content: flex-end;
   font-size: 20px; 
   margin-right: 10px;  
-  margin-left: 50px; 
+  margin-left: 10px; 
 }
 .navbar-brand{
   font-size: 24px; 
-  margin-left: 50px;  
+  margin-left: 10px;  
 }
 
 .navbar {
@@ -58,7 +66,7 @@ a:link{
     flex-direction: row;
 }
 .navbar-nav{
-    margin-right: 50px; 
+    margin-right: 10px; 
 }
   /*
   #navbar p {
@@ -78,44 +86,88 @@ a:link{
     text-decoration: none;
     color: black; 
   }*/
-.heroContainer{
-  max-width: 1800px;
-  margin-right: auto; 
-  margin-left: auto; 
+
+.jumbotron{
+    background-color: white;
+    height: 646px; 
+    height: calc(100vh-25px);
+    display: flex;
+    align-items: center;
+    margin-left: 9%; 
+    margin-right: 9%; 
 }
-.heroImg{
-  display: grid; 
-  margin: 50px 10%;
-  min-height: 80vh;
-  grid-template-rows: 1fr; 
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-  "aboutme heroimage";
+.jumboCopy{
+    width: auto;
+    padding: 5px; 
+    min-width: 500px; 
+    max-height: 700px;
+    color: black; 
+    text-align: left; 
 }
-.heroImg h1{
-  font-weight: 700;
-  font-size: 54px;
+
+.jumbotron h1{
+  font-weight: 500;
+  font-size: 60px;
   padding-bottom: 30px;
-  line-height: 90px;
+  line-height: 84px;
 }
 
-.heroImg h2{
+.jumbotron p{
+  font-size: 32px;
+  letter-spacing: -1px; 
   line-height: 46px;
-  font-weight: 400;
-}
-
-#aboutme{
-  grid-area: aboutme; 
-  padding: 70px; 
-  padding-top: 200px;
-}
-
-#aboutme h2{
-  font-family: 'Quicksand', sans-serif;
   font-weight: 200;
-  font-size: 35px; 
+  padding-bottom: 85px; 
+}
+
+.cardContainer {
+  margin-top: 20px;
+}
+.card-body{
+  background-color: white; 
+}
+.card1{
+  margin: 5px auto;
+  background-color: rgb(0, 129, 167,0.5);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  
+}
+.card2{
+  margin: 5px auto;
+  background-color: #FED9B7;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
 }
+.card3{
+  margin: 5px auto;
+  background-color: rgb(0, 175, 185,0.7);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+}
+.card4{
+  margin: 5px auto;
+  background-color: #FDFCDC;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+}
+.card5{
+  margin: 5px auto;
+  background-color: #F07167;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+}
+.container-fluid{
+  width: auto;  
+  margin-left: 10%; 
+  margin-right: 10%; 
+  margin-bottom: 20%; 
+}
+.card-img-top {
+  border-top-left-radius: calc(.25rem - 1px);
+  border-top-right-radius: calc(.25rem - 1px);
+  padding: 20px; 
+}
+
 
 /*
 button {
@@ -137,23 +189,19 @@ button:hover{
   background-color: salmon; 
 }*/
 
-.mainbutton {
-  float: left;
+.btn {
   position: relative;
   cursor: pointer;
-  color: salmon;
-  margin-top: 20px;
+  color: #fa8072;
   background-color: white; 
   font-weight: 300;
   border: 2px solid salmon;
   font-size: 20px;
-  padding: 17px;
-  width: 40%;
   overflow: hidden;
   z-index: 1;
   transition: color 150ms ease-in-out;
 }
-  .mainbutton:after {
+  .btn:after {
     content: '';
     position: absolute;
     display: block;
@@ -163,168 +211,53 @@ button:hover{
     width: 0;
     height: 100%;
     background: salmon;
+    border-color: white;
     z-index: -1;
     transition: width 150ms ease-in-out;
   }
   
-  .mainbutton:hover {
+  .btn:hover {
     color: #fff;
   }
-  .mainbutton:hover:after {
+  .btn:hover:after {
       width: 110%;
     }
 
-.heroimage{
-  grid-area: heroimage; 
-  margin: 70px; 
-  background-image: url("../images/Myphoto_1.png");
-  background-repeat: no-repeat; 
-  background-size: ccover; 
-  background-position: center;
-}
-.containerContent{
-  width: auto;
-  max-width: 1800px;
-  margin-right: auto; 
-  margin-left: auto; 
-}
-#projectGrid{
-  position: relative; 
-  display: grid; 
-  margin: 50px 10%;
-  min-height: 500px;
-  max-height: 180vh;
-  grid-template-rows: 1fr 1fr 1fr 1fr; 
-  grid-template-columns: 50% 50%;
-  grid-template-areas:
-  "projectstw savethewhales "
-  "projectgardenfresh gardenfresh "
-  "projectdoe doe "
-  "projecttripper tripper ";
-} 
 
-#projectGrid h1{
-  padding-bottom: 40px; 
-}
-
-#projectGrid h2{
-  padding-bottom: 20px;
-  line-height: 50px;
-  font-weight: 300;
-}
-
-.projectGridArea{
-  background-position: center; 
-  margin: 40px ; 
-  display: grid; 
-  align-content: center; 
-  justify-content: center;
-}
-
-#projectstw{
-  background-color: rgb(162, 213, 242,0.5);
-  grid-area: projectstw;
-  padding: 80px; 
-  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)*/;
-}
-
-
-
-#savethewhales{
-  grid-area: savethewhales;
-  background-image: url("../images/photosavethewhales.png");
-  background-size: contain; 
-  background-repeat: no-repeat;
-} 
-
-#projectdoe {
-  grid-area: projectdoe; 
-  background-color:#E7F7FA; 
-  padding: 80px; 
-}
-
-#doe{
-  grid-area: doe; 
-  background-image: url("../images/photodoe.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-#projectgardenfresh {
-  grid-area: projectgardenfresh; 
-  background-color: rgb(253, 245, 210,0.7);
-  padding: 80px; 
-}
-
-#gardenfresh{
-  grid-area: gardenfresh; 
-  background-image: url("../images/photogardenfresh.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-
-#projecttripper {
-  grid-area: projecttripper; 
-  background-color: rgb(248, 162, 88,0.3); 
-  padding: 80px; 
-}
-
-#tripper{
-  grid-area: tripper; 
-  background-image: url("../images/phototripper.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-
-#footer{
+.container-footer{
+  background-color: rgb(221, 234, 240);
   position: relative;
-  width: auto;
-  margin-right: auto; 
-  margin-left: auto; 
-  flex-direction: row; 
-  background-color: white; 
-  border-top: 1px solid gray; 
-  margin-top: 300px;
-}
-
-.footer-block {
-  max-width: 1800px;
-  display: flex;
-  height: 100px;
-  width: 500px;  
-  justify-content: space-around;
-  align-items: center;  
-}
-
-.footer-block p{
   cursor: pointer;
+  width: auto;
+  justify-content: center; 
+
+}
+.footer-block{
+  display: flex; 
+  flex-direction: column;
+  text-align: left; 
+  padding-top: 20px; 
+  padding-left: 10px; 
+  padding-right: 10px; 
+  margin-right: 10%; 
+  margin-left: 10%; 
 }
 
 .copyright{
   display: flex;
   align-items: center;  
-  justify-content: center; 
-  background-color: #FF7E67;
-  height: 50px; 
-  width: 100%; 
+  justify-content: center;
+  height: auto;
+  padding-bottom: 10px; 
+  padding-top: 10px;  
+  width: auto; 
 }
 
-.contentbutton{
+.btn1{
   position: relative;
   cursor: pointer; 
-  color: #07689f;
-  width: 50%; 
-  margin-top: 20px;
+  color: salmon;
   background-color: transparent;
-  padding: 15px 15px;
-  border-style: solid;
-  border-width: 3px;
-  border-color: #07689f;
-  font-family: Poppins, sans-serif;
-  font-size: 24px;
-  font-weight: 400;
   overflow: hidden;
   z-index: 1;
   transition: color 150ms ease-in-out;
@@ -340,24 +273,12 @@ button:hover{
   transition: all 0.2s ease-in;
   */
 }
-.contentbutton:after{
-    content: '';
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 100%;
-    background: #07689F;
-    z-index: -1;
-    transition: width 150ms ease-in-out;
 
-}
-.contentbutton:hover{
-  color: white;
+
+.btn1:hover{
+  color: rgb(250, 128, 114,0.5); 
   text-decoration: none;
-  background-color:#07689F; 
+  background-color: transparent; 
   text-decoration: none;
 }
 .contentbutton:link{
@@ -365,273 +286,9 @@ button:hover{
 
 }
 
-#projectGrid button{
-  position: relative;
-
-}
-
-/*MySkill css from here */
-.heroPage{ 
-  margin: 50px 10%;
-  min-height: 200px;
-  height: 90vh;
-
-}
-.contentArea h1{
-  padding-bottom: 20px;
-  padding-top: 20px;  
-}
-#heroContent{
-  /*background-image: url("../images/background_pink1.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;*/
-  padding: 50px; 
-  padding-top: 100px;
-}
-.aboutMeGrid{
-  display: grid; 
-  margin: 50px 10%;
-  margin-bottom: 50px;
-  min-height: 400px;
-  height: 65vh;
-  grid-template-rows: 1fr; 
-  grid-template-columns: 60% 40%;
-  grid-template-areas:
-  "mainContent mainImg";
-} 
-
-
-#mainImg{
-  background-image: url("../images/sign.jpg"); 
-  background-position: center ;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-#mainContent{
-  background-color: rgb(255, 199, 150,0.6);
-  padding: 50px; 
-  padding-right: 60px;
-}
- 
-.flexContainer{
-  position: relative;
-  display: flex;
-  flex-direction: row;  
-  margin: 20px; 
-  height: 550px;
- 
-}
-.flexContainer h3{
-  background-color: #8ABFC9;
-  font-size: 26px;
-  text-align: center;
-  padding-bottom: 20px;
-  padding-top: 25px;
-  margin: 0px;
-  
-}
-
-
-.list ul{
-  list-style: none;
-  display: block;
-  
-}
-
-.list li{
-
-  font-size: 22px;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 200; 
-  padding: left 5px; 
-  padding-top: 10px; 
-  margin: 5px; 
-}
-
-.mySkill{
- 
-  margin: 50px 10%;
-  min-height: 400px;
-  height: 65vh;
-  padding: 50px; 
-  margin-bottom: 100px;
-
-} 
-
-
-#uxSkill{
-  background-color: #D8EEF2;
-  width: 33%;
-  margin: 20px; 
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
-}
 
 
 
-#uiSkill{
-  background-color: #D8EEF2;;
-  width: 33%;
-  margin: 20px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
-
-}
-
-#wedSkill{
-  background-color: #D8EEF2;;
-  width: 33%;
-  margin: 20px; 
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
-}
-
-.container {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-/*stw page*/
-.jumbotron {
-  background-image: url("../images/184.png"); 
-  background-color: white;
-  height: 70vh; 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start; 
-  text-align: right;
-}
-.display-4{
-  font-weight: 500;
-}
-.lead{
-  font-size: 30px;
-}
-.jumbotron1{
-  height: fit-content;
-  background: rgb(162, 213, 242,0.2) ;
-  align-items: center; 
-  justify-content: center;
-  padding-top: 40px; 
-  padding-bottom: 40px; 
-}
-.display-5{
-  padding-bottom: 30px; 
-}
-.stwEmpathy{
- height: fit-content;
- margin-top: 50px; 
-
-}
-
-.contentP{
-  line-height: 40px;
-}
-.stwcontainer{
-  margin-bottom: 70px;
-  margin-top: 20px;  
-}
-.stwcontainer h2{
-  font-weight: 500;
-}
-.protoPersona{
-  background-image: url("../images/protoPersona.png");
-  background-repeat: no-repeat;
-  background-size: cover; 
-  padding-right: 40px; 
-  padding-left: 40px; 
-  margin: auto; 
-  height: 400px; 
-  max-width: 400px; 
-
-}
-.uiAnalysis{
-  background-image: url("../images/UIAnalysis.png");
-  background-repeat: no-repeat;
-  background-size: cover; 
-  padding-right: 40px; 
-  padding-left: 40px; 
-  margin: auto; 
-  height: 400px; 
-  max-width: 400px; 
-
-}
-.surveystw{
-  background-image: url("../images/survey_1.png");
-  background-repeat: no-repeat;
-  background-size: contain; 
-  background-position: center;
-  padding-right: 20px; 
-  padding-left: 20px;
-  height: 400px; 
-  max-width: auto
-}
-.interviewstw{
-  background-image: url("../images/interview_1.png");
-  background-repeat: no-repeat;
-  background-size: contain; 
-  background-position: center;
-  padding-right: 20px; 
-  padding-left: 20px;
-  height: 400px; 
-  max-width: auto
-}
-.empathystw{
-  background-image: url("../images/empathy\ map.png");
-  background-repeat: no-repeat;
-  background-size: contain; 
-  background-position: center;
-  padding-right: 20px; 
-  padding-left: 20px;
-  height: 550px; 
-  max-width: auto
-}
-.stwIdeate{
-  height: fit-content;
-  margin-top: 35px; 
-  padding-top: 40px; 
-  background-color: rgb(176, 224, 230,0.5);
-  padding-bottom: 40px;
- }
-.userPersona{
-  background-image: url("../images/User\ Persona_\ Save\ the\ Whales\ \(1\).png");
-  background-repeat: no-repeat;
-  background-size: contain; 
-  background-position: center;
-  padding-right: 20px; 
-  padding-left: 20px;
-  height: 600px; 
-  max-width: auto
-}
-.coreFeatures{
-  background-image: url("../images/corefeatures.png");
-  background-repeat: no-repeat;
-  background-size: contain; 
-  background-position: center;
-  padding-right: 20px; 
-  padding-left: 20px;
-  height: 400px; 
-  max-width: auto
-}
-.siteMap{
-  background-image: url("../images/sitemap.png");
-  background-repeat: no-repeat;
-  background-size: cover; 
-  background-position: center;
-  padding-right: 20px; 
-  padding-left: 20px;
-  height: 500px; 
-  max-width: auto
-}
-.stwDesign{
-  height: fit-content;
-  margin-top: 50px; 
- 
- }
 /*
 @media only screen and (max-width: 1000px)
 {
