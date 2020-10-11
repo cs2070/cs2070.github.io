@@ -214,8 +214,14 @@ button:hover{
     border-color: white;
     z-index: -1;
     transition: width 150ms ease-in-out;
+    outline:0;
+
   }
   
+  .btn:focus {
+    outline:0;
+  }
+
   .btn:hover {
     color: #fff;
   }
